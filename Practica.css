@@ -1,0 +1,287 @@
+
+        /* === ESTILO RESTAURANTE ELEGANTE === */
+        :root {
+            --fondo-oscuro: #2B1A10;
+            --fondo-tarjeta: #3D261C;
+            --dorado: #D4AF37;
+            --dorado-suave: #F0D78C;
+            --crema: #F8F0E3;
+            --texto-claro: #E5D4C5;
+            --rojo-acento: #922B21;
+            --sombra: rgba(0,0,0,0.45);
+            --fuente-titulos: 'Georgia', 'Times New Roman', serif;
+            --fuente-cuerpo: 'Segoe UI', 'Arial', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--fondo-oscuro) 0%, #3A2015 100%);
+            color: var(--crema);
+            font-family: var(--fuente-cuerpo);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--fuente-titulos);
+            color: var(--dorado-suave);
+            letter-spacing: 1.2px;
+        }
+
+        .titulo-principal {
+            text-align: center;
+            font-size: 2.6rem;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px var(--sombra);
+            border-bottom: 2px solid var(--dorado);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .contenedor-titulo {
+            text-align: center;
+        }
+
+        .contenedor-principal {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .contenedor-principal > h1 {
+            text-align: center;
+            margin: 25px 0;
+            font-size: 1.9rem;
+        }
+
+        /* === GRID DE PLATOS === */
+        .contenedor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .tarjeta-producto {
+            background: linear-gradient(to bottom, var(--fondo-tarjeta), #352219);
+            border: 1px solid #8B5A2B;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px var(--sombra);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .tarjeta-producto:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 14px 28px rgba(212, 175, 55, 0.2);
+            border-color: var(--dorado);
+        }
+
+        .imagen-producto {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--dorado);
+        }
+
+        .info-producto {
+            padding: 20px;
+        }
+
+        .nombre-producto {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .descripcion {
+            color: var(--texto-claro);
+            font-size: 0.92rem;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .precio {
+            font-size: 1.45rem;
+            font-weight: bold;
+            color: var(--dorado);
+            margin-bottom: 15px;
+        }
+
+        .boton-agregar {
+            width: 100%;
+            background: linear-gradient(to right, var(--dorado), #B8860B);
+            color: #1C1208;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .boton-agregar:hover {
+            background: linear-gradient(to right, #F0C808, var(--dorado));
+            transform: scale(1.03);
+        }
+
+        /* === CARRITO / PEDIDO === */
+        .carrito {
+            background: linear-gradient(to bottom, var(--fondo-tarjeta), #301F16);
+            border: 2px solid var(--dorado);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+        }
+
+        .carrito h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .carrito-vacio {
+            text-align: center;
+            color: var(--texto-claro);
+            font-style: italic;
+            padding: 25px;
+        }
+
+        #lista-carrito {
+            margin-bottom: 25px;
+        }
+
+        .item-carrito {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 10px;
+            border-bottom: 1px dashed #8B5A2B;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .item-carrito button {
+            background: var(--rojo-acento);
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.25s ease;
+        }
+
+        .item-carrito button:hover {
+            background: #A93226;
+        }
+
+        .resumen-carrito {
+            border-top: 2px solid var(--dorado);
+            padding-top: 20px;
+        }
+
+        .cantidad-total, .total-a-pagar {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .total-a-pagar {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--dorado-suave);
+        }
+
+        .contenedor-botones {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .boton-pagar {
+            flex: 1;
+            min-width: 180px;
+            background: linear-gradient(to right, #1E8449, #239B56);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .boton-pagar:hover:not(:disabled) {
+            transform: scale(1.03);
+            box-shadow: 0 6px 15px rgba(30, 132, 73, 0.35);
+        }
+
+        .boton-pagar:disabled {
+            background: #444;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .boton-vaciar {
+            flex: 1;
+            min-width: 180px;
+            background: linear-gradient(to right, var(--rojo-acento), #C0392B);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .boton-vaciar:hover {
+            transform: scale(1.03);
+        }
+
+        .mensaje-pago {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(30, 132, 73, 0.18);
+            border: 1px solid #239B56;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        .botom3, .botomlogin {
+            display: inline-block;
+            margin: 10px 6px;
+            padding: 10px 22px;
+            background: var(--dorado);
+            color: #1C1208;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .botom3:hover, .botomlogin:hover {
+            background: var(--dorado-suave);
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--dorado), transparent);
+            margin: 40px 0;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .titulo-principal { font-size: 1.9rem; }
+            .contenedor-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+            .contenedor-botones { flex-direction: column; }
+        }

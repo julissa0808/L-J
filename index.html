@@ -1,0 +1,268 @@
+<html>
+</head>
+  <body>
+  
+    <div class="contenedor-titulo">
+	<link rel="stylesheet" href="Practica.css">
+    <link rel="stylesheet" href="seleccion_carrito.css">	
+   <script src="conteo_carrito.js"></script>
+        <h1 class="titulo-principal">🍽️ Menú y Carrito de Pedidos</h1>
+    </div>
+
+    <div class="contenedor-principal">
+        <h1>🥘 Bienvenidos a Nuestro Restaurante L&J</h1>
+
+        <!-- ==== GRID DE PLATOS ==== -->
+        <div class="contenedor-grid" id="productos">
+
+            <!-- Plato 1 -->
+            <div class="tarjeta-producto">
+                <img src="imagen1.jpg" alt="Sala Moderna" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Sala Moderna</h3>
+                    <p class="descripcion">Diseño elegante y acogedor para tu sala de estar.</p>
+                    <p class="precio">$250.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Sala Moderna', 250)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 2 -->
+            <div class="tarjeta-producto">
+                <img src="imagen2.jpg" alt="Comedor" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Comedor</h3>
+                    <p class="descripcion">Espacio perfecto para compartir en familia.</p>
+                    <p class="precio">$180.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Comedor', 180)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 3 -->
+            <div class="tarjeta-producto">
+                <img src="imagen3.jpg" alt="Dormitorio Principal" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Dormitorio Principal</h3>
+                    <p class="descripcion">Tu refugio personal con estilo y confort.</p>
+                    <p class="precio">$320.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Dormitorio Principal', 320)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 4 -->
+            <div class="tarjeta-producto">
+                <img src="imagen4.jpg" alt="Baño Completo" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Baño Completo</h3>
+                    <p class="descripcion">Diseño funcional y moderno para tu baño.</p>
+                    <p class="precio">$150.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Baño Completo', 150)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 5 -->
+            <div class="tarjeta-producto">
+                <img src="imagen5.jpg" alt="Muebles de Exterior" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Muebles de Exterior</h3>
+                    <p class="descripcion">Ilumina y decora tus espacios al aire libre.</p>
+                    <p class="precio">$95.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Muebles de Exterior', 95)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 6 -->
+            <div class="tarjeta-producto">
+                <img src="imagen6.jpg" alt="Sala de Entretenimiento" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Sala de Entretenimiento</h3>
+                    <p class="descripcion">Diversión y diseño en un solo lugar.</p>
+                    <p class="precio">$280.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Sala de Entretenimiento', 280)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 7 -->
+            <div class="tarjeta-producto">
+                <img src="imagen7.jpg" alt="Oficina en Casa" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Oficina en Casa</h3>
+                    <p class="descripcion">Espacio productivo con diseño elegante.</p>
+                    <p class="precio">$210.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Oficina en Casa', 210)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 8 -->
+            <div class="tarjeta-producto">
+                <img src="imagen8.jpg" alt="Cocina Integral" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Cocina Integral</h3>
+                    <p class="descripcion">Funcionalidad y belleza para cocinar.</p>
+                    <p class="precio">$450.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Cocina Integral', 450)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 9 -->
+            <div class="tarjeta-producto">
+                <img src="imagen9.jpg" alt="Recámara Infantil" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Recámara Infantil</h3>
+                    <p class="descripcion">Magia y seguridad para los más pequeños.</p>
+                    <p class="precio">$195.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Recámara Infantil', 195)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 10 -->
+            <div class="tarjeta-producto">
+                <img src="imagen10.jpg" alt="Pasillo y Decoración" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Pasillo y Decoración</h3>
+                    <p class="descripcion">Detalles que transforman cada rincón.</p>
+                    <p class="precio">$85.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Pasillo y Decoración', 85)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 11 -->
+            <div class="tarjeta-producto">
+                <img src="imagen11.jpg" alt="Iluminación LED" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Iluminación LED</h3>
+                    <p class="descripcion">Luz cálida y ahorro de energía.</p>
+                    <p class="precio">$65.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Iluminación LED', 65)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 12 -->
+            <div class="tarjeta-producto">
+                <img src="imagen12.jpg" alt="Cortinas y Tapices" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Cortinas y Tapices</h3>
+                    <p class="descripcion">Texturas y colores para ambientar.</p>
+                    <p class="precio">$78.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Cortinas y Tapices', 78)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 13 -->
+            <div class="tarjeta-producto">
+                <img src="imagen13.jpg" alt="Espejos y Marcos" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Espejos y Marcos</h3>
+                    <p class="descripcion">Amplía y embellece tus espacios.</p>
+                    <p class="precio">$55.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Espejos y Marcos', 55)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 14 -->
+            <div class="tarjeta-producto">
+                <img src="imagen14.jpg" alt="Plantas y Jardín Interior" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Plantas y Jardín Interior</h3>
+                    <p class="descripcion">Vida y frescura dentro de casa.</p>
+                    <p class="precio">$48.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Plantas y Jardín Interior', 48)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 15 -->
+            <div class="tarjeta-producto">
+                <img src="imagen15.jpg" alt="Alfombras y Pisos" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Alfombras y Pisos</h3>
+                    <p class="descripcion">Suavidad y estilo bajo tus pies.</p>
+                    <p class="precio">$120.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Alfombras y Pisos', 120)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 16 -->
+            <div class="tarjeta-producto">
+                <img src="imagen16.jpg" alt="Muebles de Almacenamiento" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Muebles de Almacenamiento</h3>
+                    <p class="descripcion">Orden con elegancia y personalidad.</p>
+                    <p class="precio">$165.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Muebles de Almacenamiento', 165)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 17 -->
+            <div class="tarjeta-producto">
+                <img src="imagen17.jpg" alt="Mesa de Centro" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Mesa de Centro</h3>
+                    <p class="descripcion">El toque final de tu sala.</p>
+                    <p class="precio">$89.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Mesa de Centro', 89)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 18 -->
+            <div class="tarjeta-producto">
+                <img src="imagen18.jpg" alt="Lámparas de Pie" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Lámparas de Pie</h3>
+                    <p class="descripcion">Iluminación elegante y funcional.</p>
+                    <p class="precio">$72.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Lámparas de Pie', 72)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 19 -->
+            <div class="tarjeta-producto">
+                <img src="imagen19.jpg" alt="Cojines y Mantas" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Cojines y Mantas</h3>
+                    <p class="descripcion">Comodidad y color en cada asiento.</p>
+                    <p class="precio">$42.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Cojines y Mantas', 42)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Plato 20 -->
+            <div class="tarjeta-producto">
+                <img src="imagen20.jpg" alt="Cuadros y Arte" class="imagen-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Cuadros y Arte</h3>
+                    <p class="descripcion">Expresión artística para tus paredes.</p>
+                    <p class="precio">$98.00</p>
+                    <button class="boton-agregar" onclick="agregarAlCarrito('Cuadros y Arte', 98)">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+        </div>
+		
+		        <!-- ==== CARRITO / PEDIDO ==== -->
+        <div class="carrito">
+            <h2>🛍️ Tu Pedido</h2>
+            <div id="lista-carrito">
+                <p class="carrito-vacio">Tu carrito está vacío</p>
+            </div>
+            <div class="resumen-carrito">
+                <div class="cantidad-total">
+                    📦 Artículos seleccionados: <span id="cantidad-articulos">0</span>
+                </div>
+                <div class="total-a-pagar">
+                    💰 TOTAL A PAGAR: $<span id="total">0.00</span>
+                </div>
+                <div class="contenedor-botones">
+                    <button class="boton-pagar" id="boton-pagar" onclick="procesarPago()" disabled>💳 Pagar Ahora</button>
+                    <button class="boton-vaciar" onclick="vaciarCarrito()">🗑️ Vaciar Carrito</button>
+                </div>
+                <div class="mensaje-pago" id="mensaje-pago">
+                    ✅ ¡Pago realizado con éxito! Gracias por tu compra 💖
+                    <a href="pago.html" class="botomlogin secundario">Pagar</a>
+                    <button class="botom3">Completar pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  <body>
+
+<html>

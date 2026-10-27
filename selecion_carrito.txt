@@ -1,0 +1,9 @@
+<!doctype html>
+<html>
+  <head>
+    <title>||Trabajando con elementos||</title>
+  </head>
+  <body>
+    <div id="div1">El texto superior se ha creado dinámicamente.</div>
+  </body>
+</html>
